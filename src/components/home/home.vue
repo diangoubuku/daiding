@@ -3,7 +3,7 @@
         <div class="view">
             <img class="w_100" src="../../assets/image/top.jpg" alt="">
             <div class="imgBox">
-                <div :class="chosen == index ? 'imgTitle active' : 'imgTitle'" v-for="(item,index) of titles" @click="isChosen(index)">
+                <div :class="chosen == index ? 'imgTitle active' : 'imgTitle'" v-for="(item,index) of titles" @click="isChosen(index)" :key="index">
                     <img v-if="chosen == index" :src="require('../../assets/image/tab'+(index + 1)+'-1.png')" alt="">
                     <img v-else :src="require('../../assets/image/tab'+(index + 1)+'.png')" alt="">
                     <br>{{item}}
@@ -23,6 +23,9 @@ export default {
             chosen:0,
             chosenImg:1
         }
+    },
+    mounted(){
+        console.log(8888)
     },
     methods:{
         isChosen(i){

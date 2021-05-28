@@ -5,7 +5,7 @@
   "author": "wsq",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js --open --hot --port 8033 --host 192.168.1.185",
+    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js --open --hot --host 0.0.0.0",
     "start": "npm run dev",
     "build": "node build/build.js"
   },
